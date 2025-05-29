@@ -5,6 +5,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #f9f9f9;
     color: #333;
@@ -21,6 +25,11 @@ body {
 #skills li {
     margin-bottom: 8px;
     font-weight: 500;
+}
+
+#skills li:hover {
+    color: #4CAF50;
+    cursor: pointer;
 }
 
 .project {
@@ -68,6 +77,7 @@ button {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
@@ -133,4 +143,24 @@ section {
 
 .profile-pic:hover {
     transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    #typing {
+        font-size: 1.1rem;
+    }
+
+    .profile-pic {
+        width: 150px;
+        height: 150px;
+    }
 }
