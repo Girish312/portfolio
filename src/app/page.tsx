@@ -45,9 +45,9 @@ export default function Portfolio() {
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100 font-sans selection:bg-cyan-500/30">
       <div className="max-w-5xl mx-auto px-6 py-16">
-        
+
         {/* HERO SECTION */}
-        <motion.header 
+        <motion.header
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           className="mb-20 text-center md:text-left"
@@ -57,7 +57,7 @@ export default function Portfolio() {
           </h1>
           <p className="text-2xl text-slate-400 font-medium">Software Developer</p>
           <div className="flex flex-wrap justify-center md:justify-start gap-4 mt-8">
-            <a href="www.linkedin.com/in/girish312" target="_blank" className="flex items-center gap-2 px-4 py-2 bg-slate-900 border border-slate-800 rounded-full hover:border-cyan-500 transition-colors">
+            <a href="https://www.linkedin.com/in/girish312" target="_blank" className="flex items-center gap-2 px-4 py-2 bg-slate-900 border border-slate-800 rounded-full hover:border-cyan-500 transition-colors">
               <Linkedin size={18} /> LinkedIn
             </a>
             <a href="https://github.com/Girish312" target="_blank" className="flex items-center gap-2 px-4 py-2 bg-slate-900 border border-slate-800 rounded-full hover:border-cyan-500 transition-colors">
@@ -67,7 +67,7 @@ export default function Portfolio() {
         </motion.header>
 
         {/* BENTO GRID SKILLS */}
-        <motion.section 
+        <motion.section
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -79,7 +79,7 @@ export default function Portfolio() {
               <Code size={20} /> Tech Stack
             </h2>
             <div className="flex flex-wrap gap-2">
-              {["Python", "JavaScript", "ReactJS", "NodeJS", "ExpressJS", "Tailwind CSS", "Firebase", "SQL", "NoSQL"].map((skill) => (
+              {["Python", "JavaScript", "HTML/CSS", "MERN", "NextJS", "Tailwind CSS", "MySQL", "Firebase"].map((skill) => (
                 <span key={skill} className="px-3 py-1 bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded-lg text-sm">
                   {skill}
                 </span>
@@ -136,7 +136,7 @@ export default function Portfolio() {
           <h2 className="text-2xl font-bold mb-8">Featured Projects</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {ProjectsPlaceholder.map((p, i) => (
-              <motion.div 
+              <motion.div
                 key={i}
                 whileHover={{ y: -5 }}
                 className="group bg-slate-900/50 border border-slate-800 p-6 rounded-3xl hover:border-cyan-500/50 transition-all"
