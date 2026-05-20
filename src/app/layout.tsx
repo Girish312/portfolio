@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title: "GIRISH PATIL",
   description: "Girish Patil — Software Developer",
   icons: {
-    icon: '/logo/professionalDP.png',
+    icon: '/professionalDP.png',
   },
 };
 
