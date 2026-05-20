@@ -26,7 +26,7 @@ const ProjectsPlaceholder = [
     liveUrl: "https://recon-plus.vercel.app/",
   },
   {
-    title: "Arisz (under development)",
+    title: "Arisz",
     description: "A modern, full-stack task management application that helps you track your daily routines, manage tasks with subtasks, and visualize your progress through beautiful charts and graphs.",
     tags: ["React", "PostgreSQL"],
     githubUrl: "https://github.com/Girish312/arisz",
@@ -34,7 +34,7 @@ const ProjectsPlaceholder = [
   },
   {
     title: "Portfolio Template",
-    description: "A single-page basic template designed by me.",
+    description: "A sleek, animated single-page template designed for developers.",
     tags: ["Framer Motion", "Vercel"],
     githubUrl: "https://github.com/Girish312/portfolio",
     liveUrl: "https://portfolio-mu-weld-68.vercel.app",
@@ -63,7 +63,8 @@ export default function Portfolio() {
             <a href="https://github.com/Girish312" target="_blank" className="flex items-center gap-2 px-4 py-2 bg-slate-900 border border-slate-800 rounded-full hover:border-cyan-500 transition-colors">
               <Github size={18} /> GitHub
             </a>
-            <a href="https://leetcode.com/u/IMxGIRISH" target="_blank" className="flex items-center gap-2 px-4 py-2 bg-slate-900 border border-slate-800 rounded-full hover:border-yellow-400 transition-colors">
+            <a href="https://leetcode.com/girish312" target="_blank" className="flex items-center gap-2 px-4 py-2 bg-slate-900 border border-slate-800 rounded-full hover:border-yellow-400 transition-colors">
+              {/* LeetCode SVG icon */}
               <svg width="18" height="18" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M36.7 36.7c-6.2 6.2-16.2 6.2-22.4 0-6.2-6.2-6.2-16.2 0-22.4l7.1-7.1c1.2-1.2 3.1-1.2 4.2 0s1.2 3.1 0 4.2l-7.1 7.1c-3.8 3.8-3.8 10 0 13.8 3.8 3.8 10 3.8 13.8 0l7.1-7.1c1.2-1.2 3.1-1.2 4.2 0s1.2 3.1 0 4.2l-7.1 7.1z" fill="#FFA116"/>
               </svg>
@@ -85,7 +86,7 @@ export default function Portfolio() {
               <Code size={20} /> Tech Stack
             </h2>
             <div className="flex flex-wrap gap-2">
-              {["Python", "JavaScript", "MERN Stack", "Tailwind CSS", "SQL", "Git & GitHub"].map((skill) => (
+              {["Python", "JavaScript", "HTML/CSS", "MERN", "NextJS", "Tailwind CSS", "MySQL", "Firebase"].map((skill) => (
                 <span key={skill} className="px-3 py-1 bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded-lg text-sm">
                   {skill}
                 </span>
@@ -94,7 +95,7 @@ export default function Portfolio() {
           </motion.div>
           <motion.div variants={itemVariants} className="bg-gradient-to-br from-blue-600 to-cyan-600 p-8 rounded-3xl flex flex-col justify-center">
             <h3 className="text-2xl font-bold">Open to Work</h3>
-            <p className="opacity-90">Currently focusing on Full-Stack Development and Artificial Intelligence roles.</p>
+            <p className="opacity-90">Currently focusing on Full-Stack JavaScript & Python roles.</p>
           </motion.div>
         </motion.section>
 
