@@ -15,9 +15,6 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "GIRISH PATIL",
   description: "Girish Patil — Software Developer",
-  icons: {
-    icon: '/professionalDP.png',
-  },
 };
 
 export default function RootLayout({
