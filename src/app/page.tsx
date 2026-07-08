@@ -20,22 +20,22 @@ const itemVariants = {
 const ProjectsPlaceholder = [
   {
     title: "Recon Plus",
-    description: "An AI powered reconaissance detection tool that monitors suspicious activity, flags attacker behaviour and help secure your infrastructure proactively.",
-    tags: ["React", "flask", "python", "firebase"],
+    description: "AI-powered reconnaissance detection tool with React frontend and Flask/Python backend, using Firebase for real-time alerts and activity monitoring.",
+    tags: ["React", "Python", "Flask", "Firebase"],
     githubUrl: "https://github.com/Girish312/ReconPlus",
     liveUrl: "https://reconplus.vercel.app/",
   },
   {
-    title: "Arisz (under development)",
-    description: "A modern, full-stack task management application that helps you track your daily routines, manage tasks with subtasks, and visualize your progress through graphical representation.",
-    tags: ["React", "SQL"],
+    title: "Arisz",
+    description: "Full-stack task management application built with Django REST Framework backend and React frontend, featuring task CRUD, subtasks, progress tracking, and MySQL database integration.",
+    tags: ["React", "Django", "Python", "MySQL"],
     githubUrl: "https://github.com/Girish312/arisz",
     liveUrl: "https://arisz.vercel.app",
   },
   {
     title: "Portfolio Template",
-    description: "A SPA designed by me.",
-    tags: ["react", "Vercel"],
+    description: "Personal developer portfolio and project showcase built with React and Tailwind CSS as a modern single-page application.",
+    tags: ["React", "Tailwind CSS"],
     githubUrl: "https://github.com/Girish312/portfolio",
     liveUrl: "https://www.girish312.tech",
   },
@@ -55,7 +55,7 @@ export default function Portfolio() {
           <h1 className="text-6xl font-black tracking-tight mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
             GIRISH PATIL
           </h1>
-          <p className="text-2xl text-slate-400 font-medium">Software Developer</p>
+          <p className="text-2xl text-slate-400 font-medium">Python Full-Stack Developer</p>
           <div className="flex flex-wrap justify-center md:justify-start gap-4 mt-8">
             <a href="https://www.linkedin.com/in/girish312" target="_blank" className="flex items-center gap-2 px-4 py-2 bg-slate-900 border border-slate-800 rounded-full hover:border-cyan-500 transition-colors">
               <Linkedin size={18} /> LinkedIn
@@ -72,7 +72,7 @@ export default function Portfolio() {
           </div>
         </motion.header>
 
-        {/* BENTO GRID SKILLS */}
+        {/* SKILLS BENTO GRID */}
         <motion.section
           variants={containerVariants}
           initial="hidden"
@@ -80,12 +80,24 @@ export default function Portfolio() {
           viewport={{ once: true }}
           className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20"
         >
-          <motion.div variants={itemVariants} className="md:col-span-2 bg-slate-900/50 border border-slate-800 p-8 rounded-3xl">
+          <motion.div variants={itemVariants} className="bg-slate-900/50 border border-slate-800 p-8 rounded-3xl">
             <h2 className="text-xl font-bold mb-4 flex items-center gap-2 text-cyan-400">
-              <Code size={20} /> Tech Stack
+              <Code size={20} /> Frontend
             </h2>
             <div className="flex flex-wrap gap-2">
-              {["Python", "JavaScript", "MERN Stack", "Tailwind CSS", "SQL", "Git & GitHub"].map((skill) => (
+              {["React", "JavaScript", "Tailwind CSS", "HTML5"].map((skill) => (
+                <span key={skill} className="px-3 py-1 bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded-lg text-sm">
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </motion.div>
+          <motion.div variants={itemVariants} className="bg-slate-900/50 border border-slate-800 p-8 rounded-3xl">
+            <h2 className="text-xl font-bold mb-4 flex items-center gap-2 text-cyan-400">
+              <Code size={20} /> Backend
+            </h2>
+            <div className="flex flex-wrap gap-2">
+              {["Python", "Django", "MySQL", "SQL"].map((skill) => (
                 <span key={skill} className="px-3 py-1 bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded-lg text-sm">
                   {skill}
                 </span>
@@ -94,7 +106,7 @@ export default function Portfolio() {
           </motion.div>
           <motion.div variants={itemVariants} className="bg-gradient-to-br from-blue-600 to-cyan-600 p-8 rounded-3xl flex flex-col justify-center">
             <h3 className="text-2xl font-bold">Open to Work</h3>
-            <p className="opacity-90">Currently focusing on Full-Stack Development and Artificial Intelligence roles.</p>
+            <p className="opacity-90">Actively seeking Python Full-Stack Development opportunities.</p>
           </motion.div>
         </motion.section>
 
@@ -137,7 +149,7 @@ export default function Portfolio() {
           </section>
         </div>
 
-        {/* DEMO PROJECTS */}
+        {/* FEATURED PROJECTS */}
         <section>
           <h2 className="text-2xl font-bold mb-8">Featured Projects</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -149,9 +161,18 @@ export default function Portfolio() {
               >
                 <h3 className="text-lg font-bold group-hover:text-cyan-400 transition-colors">{p.title}</h3>
                 <p className="text-slate-400 text-sm my-4">{p.description}</p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {p.tags.map((tag) => (
+                    <span key={tag} className="px-2 py-1 bg-slate-800 text-slate-300 text-xs rounded">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
                 <div className="flex gap-4">
-                  <a href={p.githubUrl} className="text-slate-500 hover:text-white"><Github size={20} /></a>
-                  <a href={p.liveUrl} className="text-slate-500 hover:text-white"><ExternalLink size={20} /></a>
+                  <a href={p.githubUrl} target="_blank" className="text-slate-500 hover:text-white"><Github size={20} /></a>
+                  {p.liveUrl && p.liveUrl !== "#" && (
+                    <a href={p.liveUrl} target="_blank" className="text-slate-500 hover:text-white"><ExternalLink size={20} /></a>
+                  )}
                 </div>
               </motion.div>
             ))}
