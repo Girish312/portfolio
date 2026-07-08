@@ -21,23 +21,23 @@ const ProjectsPlaceholder = [
   {
     title: "Recon Plus",
     description: "An AI powered reconaissance detection tool that monitors suspicious activity, flags attacker behaviour and help secure your infrastructure proactively.",
-    tags: ["React", "Tailwind"],
+    tags: ["React", "flask", "python", "firebase"],
     githubUrl: "https://github.com/Girish312/ReconPlus",
-    liveUrl: "https://recon-plus.vercel.app/",
+    liveUrl: "https://reconplus.vercel.app/",
   },
   {
     title: "Arisz (under development)",
-    description: "A modern, full-stack task management application that helps you track your daily routines, manage tasks with subtasks, and visualize your progress through beautiful charts and graphs.",
-    tags: ["React", "PostgreSQL"],
+    description: "A modern, full-stack task management application that helps you track your daily routines, manage tasks with subtasks, and visualize your progress through graphical representation.",
+    tags: ["React", "SQL"],
     githubUrl: "https://github.com/Girish312/arisz",
     liveUrl: "https://arisz.vercel.app",
   },
   {
     title: "Portfolio Template",
-    description: "A single-page basic template designed by me.",
-    tags: ["Framer Motion", "Vercel"],
+    description: "A SPA designed by me.",
+    tags: ["react", "Vercel"],
     githubUrl: "https://github.com/Girish312/portfolio",
-    liveUrl: "https://portfolio-mu-weld-68.vercel.app",
+    liveUrl: "https://www.girish312.tech",
   },
 ];
 
